@@ -13,6 +13,7 @@ const UserSchema = new Schema({
     },
     posts: [PostSchema],
     likes: Number,
+    // a user can have an array of blogposts
     blogPosts: [{
         type: Schema.Types.ObjectId,
         ref: 'blogPost'
