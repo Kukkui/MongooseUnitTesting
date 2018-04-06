@@ -26,6 +26,7 @@ UserSchema.virtual('postCount').get(function() {
     return this.posts.length;
 });
 
+//mongoose middleware 
 UserSchema.pre('remove', function(next) {
   // this === user instance 'aka joe'
   // BlogPost here is referenced in order to avoid cyclic requires
